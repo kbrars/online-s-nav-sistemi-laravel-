@@ -6,14 +6,11 @@ use App\Http\Controllers\loginConroller;
 use App\Http\Controllers\SinavController;
 use App\Http\Controllers\SoruController;
 use App\Http\Controllers\AdminController;
-
 use App\Http\Controllers\ProjeController;
-
 use App\Http\Controllers\OgretmenBilgiDuzenleController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DynamicAddRemoveFieldController;
 use Illuminate\Http\Request;
-
 
 
 
@@ -68,8 +65,6 @@ Route::post("/ogretmenBilgiSayfasi",[OgretmenBilgiDuzenleController::class,"ogre
 Route::get("/soru/{soru_id}",[SoruController::class,"soruDuzenlemeGET"])->name("soruDuzenlemeGET");
 Route::post("/guncelleme",[SoruController::class,"guncelleme"])->name("guncelleme");
 Route::get("/userAdd",[ProjeController::class,"userAdd"]);
-
-
 
 
                       /* ADMİN SAYFASI */
