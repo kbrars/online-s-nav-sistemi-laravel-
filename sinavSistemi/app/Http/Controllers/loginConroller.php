@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Providers\RouteServiceProvider;
-
 use App\Models\User;
-
 use Illuminate\Support\Facades\Hash;
-
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -109,12 +106,4 @@ class loginConroller extends Controller
             return redirect()->route("giriş_kaydol_Sayfasi");
         }
     }
-
-
-   
-    
-    
-
-
-
 }
