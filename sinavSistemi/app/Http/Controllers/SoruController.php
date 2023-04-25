@@ -9,9 +9,7 @@ use Illuminate\Console\View\Components\Alert;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
-
 use Illuminate\Support\Facades\DB;
-
 use Illuminate\Http\Request;
 
 
@@ -125,13 +123,5 @@ class SoruController extends Controller
       }
       DB::table('seceneks')->where('secenek', 'silindi456789')->delete();
       return redirect()->route("soruDuzenlemeGET", $request->soru_id);
-     
-   
-    }
-
-
-
-
-  
-  
+    }  
 }
