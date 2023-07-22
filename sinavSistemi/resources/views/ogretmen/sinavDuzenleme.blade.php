@@ -3,15 +3,11 @@
 <script src="../../../jsDosyalari/sinavDuzenleme.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>    
 @endsection
 @extends("layout.ogretmenSidebar")
 @section("icerik")
-
-
  <div class="content-wrapper">
-
   <!--SINAV DÜZENLEME -->
     <div class="card  container mt-2">
       <div class="card-header ">
@@ -32,7 +28,6 @@
               <label class="form-label mt-2" for="sinav_tarihi">Sınav Tarihi:</label>
               <input type="datetime-local" readonly value="{{isset($sinav_tarihi)?$sinav_tarihi:'yok'}}" name="sinav_tarihi" id="sinav_tarihi" class="form-control">
             </div>
-
             <div class="col-12 col-sm-6">
               <label class="form-label mt-2" for="">Sınav Süresi:</label>
               <input type="time" value="{{isset($sinav_süresi)?$sinav_süresi:'yok'}}" readonly name="sinav_süresi" id="sinav_saati" class="form-control">
@@ -110,7 +105,7 @@
             var btnID=1;
             var secenekSayisi=1;
             var dizi=["cevapBtn0"];
-          var cevapInput=document.getElementById("cvpInput");
+            var cevapInput=document.getElementById("cvpInput");
            
           
             function secenekYarat(){         
@@ -124,7 +119,6 @@
               silBtn.classList.add('btn','btn-danger','mt-2');
               sec.classList.add('input-group');
               _inp.classList.add('form-control','mt-2');
-
               _inp.setAttribute('placeholder',"Seçenek");
               _inp.setAttribute('name','secenek['+i+']');
               cevapBtn.setAttribute('type','button');
@@ -134,10 +128,8 @@
               silBtn.setAttribute('id',silID);
               sec.setAttribute('id','seceneklerDiv'+divID);
               silBtn.setAttribute('onclick',"secenekSil(this.id)");
-
              cevapBtn.innerText="Seçenek";
-             silBtn.innerText="X";
-           
+             silBtn.innerText="X";          
              seceneklerDiv.appendChild(sec);
              sec.appendChild(cevapBtn);
              sec.appendChild(_inp);
@@ -193,14 +185,10 @@
                 btn2.style.background="red";
                 btn2.style.color="white";
                 btn2.innerText="Yanlış";
-  
               }
-            }
-         
+            }        
            }
-
-          </script>
-        
+          </script>      
        </div>
      </div>
    </div>
@@ -258,12 +246,8 @@
         </div>
       </div>
     </div>
-
   <!--SORU DUZENLEME MODAL SONU-->
  <script>
-
-
-
   function updateSoru(id){
      var soruDuzenleBody=document.getElementById('soruDuzenleBody');
     $.ajax({
@@ -273,13 +257,9 @@
        success:function(result){
         console.log(result);
       } 
-     });
-      
-  }
-    
+     });    
+  }    
  </script>
- 
-
 @endsection
 
 
